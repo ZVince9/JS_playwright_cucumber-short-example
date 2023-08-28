@@ -31,3 +31,36 @@ Before you begin, ensure you have the following software installed:
 
    ```sh
    git clone https://github.com/your-username/test-playwright-cucumber.git
+
+   ```
+
+2. npm install
+
+## Runing Tests
+
+- npm test
+- npm run api
+- npm run all
+
+^ depending which suite to run
+
+## Project Structure
+
+test-playwright-cucumber/
+├── src/
+│ ├── test/
+│ │ ├── features/
+│ │ │ ├── todo.feature
+│ │ │ ├── api.feature
+│ │ ├── step_definitions/
+│ │ │ ├── todoSteps.js
+│ │ │ ├── apiSteps.js
+├── package.json
+├── README.md
+
+## Dependencies
+
+- @cucumber/cucumber: Cucumber framework for behavior-driven development.
+- @playwright/test: Playwright library for browser automation.
+- axios: Promise-based HTTP client for making API requests.
+- dotenv: Loads environment variables from a .env file.
