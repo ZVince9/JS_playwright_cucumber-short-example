@@ -47,16 +47,16 @@ Before you begin, ensure you have the following software installed:
 ## Project Structure
 
 test-playwright-cucumber/
-├── src/
-│ ├── test/
-│ │ ├── features/
-│ │ │ ├── todo.feature
-│ │ │ ├── api.feature
-│ │ ├── step_definitions/
-│ │ │ ├── todoSteps.js
-│ │ │ ├── apiSteps.js
-├── package.json
-├── README.md
+- ├── src/
+- │ ├── test/
+- │ │ ├── features/
+- │ │ │ ├── todo.feature
+- │ │ │ ├── api.feature
+- │ │ ├── step_definitions/
+- │ │ │ ├── todoSteps.js
+- │ │ │ ├── apiSteps.js
+- ├── package.json
+- ├── README.md
 
 ## Dependencies
 
