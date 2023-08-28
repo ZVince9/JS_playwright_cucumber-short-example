@@ -17,6 +17,14 @@ This is a sample Playwright Cucumber project that demonstrates how to use Playwr
 
 This project showcases how to create end-to-end tests for a web application using Playwright and Cucumber. It includes example feature files and step definitions to demonstrate the integration of Playwright and Cucumber for behavior-driven development (BDD) testing.
 
+## Playwright
+
+[Playwright](https://github.com/microsoft/playwright) is a Node.js library that provides a high-level API for automating browsers (Chromium, Firefox, and WebKit) for various automation tasks, including testing.
+
+## Cucumber
+
+[Cucumber](https://github.com/cucumber/cucumber-js) is a popular tool for behavior-driven development (BDD) that allows you to write human-readable descriptions of software features and then execute them as automated tests.
+
 ## Getting Started
 
 ### Prerequisites
