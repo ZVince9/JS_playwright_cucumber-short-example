@@ -1,0 +1,26 @@
+{
+  "name": "test-playwright-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js src/test/features/todo.feature",
+    "api": "cucumber-js src/test/features/api.feature",
+    "all": "cucumber-js src/test/features/*"
+  },
+  "keywords": [
+    "cucumber",
+    "playwright-cucumber"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.4.0",
+    "@playwright/test": "^1.37.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.1"
+  }
+}

@@ -1,0 +1,69 @@
+const { Given, Then } = require("@cucumber/cucumber");
+const TodoPage = require("../pages/todoPage");
+const ExtendPage = require("../pages/extendPage");
+
+const todoPage = new TodoPage();
+const extendPage = new ExtendPage("Zilvinas", "cucumber short test example");
+
+Given("User navigates to the application", async () => {
+  await todoPage.open();
+  await extendPage.console();
+});
+
+Then("User click on the javascript", async () => {
+  await todoPage.clickTab("JavaScript");
+});
+
+Then("User click on this {string}", async function (tab) {
+  await todoPage.clickInsideTab(tab);
+});
+
+Then(
+  "User types todo item {string}, {string}",
+  async function (todoitem, value) {
+    await todoPage.addTodoItems(todoitem, value);
+    await todoPage.close();
+  }
+);
+
+// Given("User navigates to the application", async () => {
+//   browser = await chromium.launch({ headless: true });
+//   page = await browser.newPage();
+//   await page.goto("https://todomvc.com/");
+// });
+
+// Then("User click on the javascript", async () => {
+//   await page.waitForLoadState("domcontentloaded");
+//   await page.click('//div[contains(text(), "JavaScript")]');
+// });
+
+// Then("User click on this {string}", async function (tab) {
+//   let locator = `(//li[contains(@class,'routing')])[${tab}]`;
+//   await page.waitForSelector(locator, {
+//     state: "visible",
+//     timeout: 2000,
+//   });
+//   await page.click(locator);
+// });
+
+// Then(
+//   "User types todo item {string}, {string}",
+//   async function (todoitem, value) {
+//     await this.page.waitForLoadState("domcontentloaded");
+//     for (let i = 1; i <= 10; i++) {
+//       await this.page.waitForSelector(`//h1[contains(text(), "todos")]`, {
+//         state: "visible",
+//         timeout: 2000,
+//       });
+//       await this.page
+//         .locator(`//input[contains(@${value},'new-todo')]`)
+//         .type(`${i} ${todoitem}`);
+//       await this.page.keyboard.press("Enter");
+//       let locator = this.page.locator(
+//         `(//label[contains(text(), "${todoitem}")])[${i}]`
+//       );
+//       await expect(locator).toContainText(todoitem);
+//     }
+//     await browser.close();
+//   }
+// );

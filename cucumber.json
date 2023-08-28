@@ -1,0 +1,8 @@
+{
+  "default": {
+    "path": ["src/test/features/*.feature"],
+    "retry": 0,
+    "require": ["src/test/steps/*.js"],
+    "paralel": 2
+  }
+}
