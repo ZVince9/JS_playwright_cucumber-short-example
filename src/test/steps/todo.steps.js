@@ -1,30 +1,47 @@
+// Import the Given and Then functions from the Cucumber library
 const { Given, Then } = require("@cucumber/cucumber");
+
+// Import the TodoPage and ExtendPage classes
 const TodoPage = require("../pages/todoPage");
 const ExtendPage = require("../pages/extendPage");
 
+// Create instances of the TodoPage and ExtendPage classes
 const todoPage = new TodoPage();
 const extendPage = new ExtendPage("Zilvinas", "cucumber short test example");
 
+// Define a step for navigating to the application
 Given("User navigates to the application", async () => {
+  // Open the browser and navigate to the application
   await todoPage.open();
+
+  // Log a message using the ExtendPage's console function
   await extendPage.console();
 });
 
+// Define a step for clicking on the JavaScript tab
 Then("User click on the javascript", async () => {
   await todoPage.clickTab("JavaScript");
 });
 
+// Define a step for clicking on a specific tab
 Then("User click on this {string}", async function (tab) {
   await todoPage.clickInsideTab(tab);
 });
 
+// Define a step for adding a todo item
 Then(
   "User types todo item {string}, {string}",
   async function (todoitem, value) {
+    // Add multiple todo items using the provided values
     await todoPage.addTodoItems(todoitem, value);
+
+    // Close the browser
     await todoPage.close();
   }
 );
+
+// THIS IS EXAMPLE FOR CUCUMBER JS USING FUNCITONAL WAY
+// ----------------------------------------------------------------
 
 // Given("User navigates to the application", async () => {
 //   browser = await chromium.launch({ headless: true });
@@ -67,3 +84,5 @@ Then(
 //     await browser.close();
 //   }
 // );
+
+// ----------------------------------------------------------------
