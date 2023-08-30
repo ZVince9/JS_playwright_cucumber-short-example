@@ -6,7 +6,8 @@
   "scripts": {
     "test": "cucumber-js src/test/features/todo.feature",
     "api": "cucumber-js src/test/features/api.feature",
-    "all": "cucumber-js src/test/features/*"
+    "all": "cucumber-js src/test/features/*",
+    "login": "cucumber-js src/test/features/login.feature"
   },
   "keywords": [
     "cucumber",

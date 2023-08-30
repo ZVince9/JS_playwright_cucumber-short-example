@@ -6,7 +6,7 @@ const TodoPage = require("../pages/todoPage");
 const ExtendPage = require("../pages/extendPage");
 
 // Create instances of the TodoPage and ExtendPage classes
-const todoPage = new TodoPage();
+const todoPage = new TodoPage("Petras");
 const extendPage = new ExtendPage("Zilvinas", "cucumber short test example");
 
 // Define a step for navigating to the application

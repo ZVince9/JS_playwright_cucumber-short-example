@@ -12,6 +12,7 @@ class TodoPage {
     this.browser = await chromium.launch({ headless: true });
     this.page = await this.browser.newPage();
     await this.page.goto("https://todomvc.com/");
+    // console.log(this.name);
   }
 
   /**
