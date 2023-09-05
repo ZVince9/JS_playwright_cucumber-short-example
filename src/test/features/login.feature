@@ -1,4 +1,4 @@
-Feature: Login 
+Feature: Login form
 
 Scenario: Successful login to the developer console
     Given an unauthenticated user navigates to the console
@@ -6,4 +6,8 @@ Scenario: Successful login to the developer console
     Then the user is successfully authenticated
     And the console landing page is displayed
 
-# additional negative scenarios could be written as well
+Scenario: Un-successfully login to the developer console
+    Given an unauthenticated user navigates to the console
+    When incorrect login details are submitted
+    Then the user sees an error message
+    And the console home page is displayed
