@@ -15,7 +15,7 @@ class LoginPage {
    * Opens a Chromium browser, navigates to the login page URL, and initializes a new page.
    */
   async goToThisIsBudPage() {
-    this.browser = await chromium.launch({ headless: false });
+    this.browser = await chromium.launch({ headless: true });
     this.page = await this.browser.newPage();
     await this.page.goto(this.url);
   }
